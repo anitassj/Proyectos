@@ -1,0 +1,263 @@
+/* Estilos generales */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff; 
+    font-size: 20px;
+    line-height: 1.5;
+    color: #3c3b3b;
+    text-align: justify;
+}
+
+/* Estilos para el encabezado */
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    color: #007bff; 
+    font-size: 36px;
+    text-align: center;
+}
+
+/* Estilos para el enlace */
+a {
+    color: #007bff; 
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para lista desordenada */
+ul {
+    list-style: square;
+}
+
+/* Estilos para la calculadora */
+.calculadora {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f5f5f5; /* Gris claro para el fondo */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+}
+
+span {
+    margin-left: 10px;
+}
+
+/* Estilos para los botones */
+button {
+    margin: 10px;
+    padding: 10px 80px;
+    background: linear-gradient(45deg, #ff5733, #ff0000);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #e29543; /* Cambio de color en el hover */
+}
+
+/* Estilos para la imagen */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el footer de contacto */
+.contacto {
+    background-color: #007bff; /* Azul claro para el fondo del footer */
+    color: #fff; /* Texto blanco */
+    padding: 30px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.contacto h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #292d2d; /* Color de título personalizado */
+}
+
+.contacto p {
+    margin: 5px 0;
+}
+
+.contacto strong {
+    font-weight: bold;
+    color: #024092; /* Color personalizado para el texto en negrita */
+}
+
+.contacto a {
+    color: #4e94f0; /* Color personalizado para los enlaces */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contacto a:hover {
+    color: #e13d37;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    border-style: solid;
+    background-color: rgb(236, 233, 233);
+    padding: 2%;
+    width: 30%;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #32c2c2;
+}
+
+/* Estilos para el menú desplegable */
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #e29543;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f5f5f5;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 10px 20px;
+}
+
+/* Estilos para el icono del menú desplegable */
+.dropdown > a::after {
+    content: "▼";
+    margin-left: 5px;
+}
+
+/* Estilos para el menú principal */
+.menu > li {
+    position: relative;
+}
+
+/* Estilos para el submenú */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f5f5f5;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.submenu a:hover {
+    background-color: #e29543;
+}
+
+/* Estilo para el interruptor */
+.modo-oscuro-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+/* Estilo para la etiqueta del interruptor */
+.modo-oscuro-toggle label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para el modo claro */
+body.modo-claro {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilos para el modo oscuro */
+body.modo-oscuro {
+    background-color: #000000;
+    color: #ffffff;
+}

@@ -1,0 +1,170 @@
+<!-- Mi primer página -->
+<!doctype html>
+<html lang="es">
+
+  <head>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Calculadora, IMC, estado de salud">
+    <meta name="description" content="Esta es una calculadora gratuita para corroborar su estado de salud">
+    <meta name="author" content="Ana Luz Ulariaga">
+    <title>Calculadora de IMC</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="https://www.systemuicons.com/images/icons/calculator.svg">
+  </head>
+
+  <body>
+    <header>
+
+      <!-- Menú desplegable -->
+        <nav>
+          <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li class="dropdown">
+              <a href="#">Más información</a>
+              <ul class="submenu">
+                <li><a href="#titulo1">¿Qué es el IMC?</a></li>
+                <li><a href="#titulo2">¿Cómo se calcula el IMC?</a></li>
+                <li><a href="#titulo3">Clasificación del IMC</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contacto</a></li>
+            <li class="modo-oscuro-toggle">
+              <input type="checkbox" id="modo-oscuro-switch">
+              <label for="modo-oscuro-switch">Modo Oscuro</label>
+            </li>
+          </ul>
+        </nav>
+       
+      <h1 title="Pruebe la calculadora ❤️​">Calculadora de Índice de Masa Corporal (IMC)</h1>
+      <p>
+        Para un calculo correcto, tenés que introducir los siguientes datos: 
+
+        <!-- REVISAR 
+        <img src="../images/balanza.png" alt="balanza" style="float: right;">
+        <img src="https://www.flaticon.es/icono-gratis/calcular_1046283?term=calculadora&page=1&position=2&origin=search&related_id=1046283" alt="calculadora" style="float: left;">
+        -->
+
+      </p>
+    </header>
+
+    <section class="calculadora">
+      <form autocomplete="on">
+        <fieldset>
+          <legend><img src="https://icons8.com/icon/HtfAOpkg6Iyz/calculator"></i></legend>
+          <section>
+              <label for="peso">Peso en kilogramos:</label>
+              <input type="number" id="peso" placeholder="60" autofocus required style="text-align: center" required>
+              <span>kg</span>
+          </section>
+          <section>
+              <label for="altura">Altura en metros:</label>
+              <input type="number" id="altura" placeholder="1.70" required style="text-align: center" required>
+              <span>m</span>
+          </section>
+          <button id="calcular">Calcular IMC</button>
+        </fieldset>
+      </form>
+      <div id="resultado"></div>
+    </section>  
+
+    <section>
+      <h2>Guía de lectura</h2>
+      <ol>
+        <i class="fi fi-rr-square-right"></i>
+        <i class="fi fi-br-arrow-right"></i>
+        <i class="fi fi-sr-book"></i>
+        <i class="fi fi-rr-broom"></i>
+
+        <li><a href="#titulo1">¿Qué es el IMC?</a></li>
+        <li><a href="#titulo2">¿Cómo se calcula el IMC?</a></li>
+        <li><a href="#titulo3">Clasificación del IMC</a></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2 id="titulo1">¿Qué es el IMC?</h2>
+      <p>
+          El Índice de Masa Corporal (IMC) es una medida de relación entre el peso y la altura de 
+          una persona. El IMC es usado como uno de varios indicadores para evaluar el <b>estado nutricional</b>.
+      </p>
+      <p>
+          El IMC constituye la medida poblacional más útil del sobrepeso y la obesidad, ya que la forma 
+          de calcularlo no varía en función del sexo ni de la edad en la población adulta. No obstante, 
+          debe considerarse como una guía aproximativa, puesto que puede no corresponder al mismo grado de
+          sobrepeso en diferentes personas.
+      </p>
+      <p>
+          La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional
+          dependiendo del IMC de una persona. Para más información hace  
+          <a href="https://cdn.who.int/media/docs/default-source/obesity/who-discussion-paper-on-obesity---final190821-es.pdf?sfvrsn=4cd6710a_24#:~:text=El%20%C3%ADndice%20de%20masa%20corporal,en%20lactantes%2C%20ni%C3%B1os%20y%20adolescentes."
+          target="_blank">click aquí.</a>
+          <img src="images/imagen-principal.jpeg" alt="Tabla de IMC: estado de salud según tu peso. 
+          Por debajo: <18.5; saludable: entre 18.5 y 24.9, sobrepeso: entre 25 y 29.9, 
+          obesidad I: entre 35 y 39.9, obesidad II: > 40" />
+      </p>
+    </section>
+
+    <section>
+        <h2 id="titulo2">¿Cómo se calcula el IMC?</h2>
+        <p>
+        El índice de masa corporal se calcula mediante una división entre el peso en kilogramos y 
+        la altura en metros elevada al cuadrado. Por ejemplo, supongamos que una persona
+        pesa 60 kilos y mide una altura de 1.70 metro, la cuenta que se realiza es: 
+        60 &#10135; (1.70)<sup>2</sup> = 20.76
+        <br>
+        Por lo tanto, según la <abbr title="Organización Mundial de la Salud">OMS</abbr>, su peso se encuentra saludable ya que está entre el rango 
+        18.5 y 24.9 del índice. 
+        </p>
+    </section>
+
+    <section>
+      <h2 id="titulo3">Clasificación del IMC</h2>
+      <p>El IMC se clasifica según su valor en:</p>
+      <table>
+        <caption>Tabla 1.1 - Clasificación</caption>
+        <tr>
+          <th>Estado de salud</th>
+          <th>Rango</th>
+        </tr>
+        <tr>
+          <td>Por debajo</td>
+          <td>Menor a 18.5</td>
+        </tr>
+        <tr>
+          <td>Saludable</td>
+          <td>Entre 18.5 y 24.9</td>
+        </tr>
+        <tr>
+          <td>Sobrepeso</td>
+          <td>Entre 25 y 29.9</td>
+        </tr>
+        <tr>
+          <td>Obesidad I</td>
+          <td>Entre 25 y 29.9</td>
+        </tr>
+        <tr>
+          <td>Obesidad II</td>
+          <td>Mayor a 40</td>
+        </tr>
+      </table>
+      <p>
+        Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a>
+      </p>
+    </section>
+  
+    <footer class="contacto">
+      <div class="container">
+          <div class="contacto-info">
+              <h3>Contacto</h3>
+              <p><strong>Celular:</strong> <a href="tel:+5492346304449">+5492346304449</a></p>
+              <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ana-luz-ulariaga">Ana Luz Ulariaga</a></p>
+              <p><strong>Email:</strong> <a href="mailto:analuzulariaga@gmail.com">analuzulariaga@gmail.com</a></p>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
