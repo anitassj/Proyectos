@@ -188,6 +188,9 @@ input[type="number"] {
 #calcular:hover {
     background-color: #e29543; 
 }
+
+
+
 /**************************************************************************/
 
 
@@ -230,7 +233,7 @@ tr:hover {
 
 /* ESTILOS GENERALES PARA FOOTER */
 footer{
-    background-color: #FED9B7;
+    background-image: url("docs/assets/images/pexels-daniel-absi-952670.jpg");
     padding: 0;
     
 }
