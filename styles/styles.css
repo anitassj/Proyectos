@@ -2,23 +2,21 @@
 *{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 20px; 
+    box-sizing: border-box;
 }
 /**************************************************************************/
 
 
 /* ESTILOS GENERALES DEL ENCABEZADO */
 header {
-    margin: 0 auto;
     text-align: center;
 }
-
 
 /* Estilo del titulo (h1) del encabezado */
 header h1 {
     color: #0081A7; 
     font-size: 36px;
-    text-align: center;
 }
 /**************************************************************************/
 
@@ -28,9 +26,8 @@ body {
     color: #3c3b3b;
     text-align: justify;
     background-color: #ffffff;
-    margin: 0 auto;
-    padding-left: 50px;
-    padding-right: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos para los títulos (h2) del cuerpo */
@@ -39,20 +36,28 @@ body h2{
     font-size: 26px;
     text-align: left;
 }
+
+/* Estilos para el contenedor del contenido */
+.contenido {
+    margin: 20px; 
+    padding: 20px;
+}
+
 /**************************************************************************/
 
 
 /* ESTILOS GENERALES PARA EL MENÚ */
 .menu {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: space-around;
     background-color: #f5f5f5;
-}
-
-.menu li {
-    position: relative;
+    padding: 0;
+    margin: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    top: 0; 
 }
 
 .menu a {
@@ -60,7 +65,7 @@ body h2{
     color: #0081A7;
     padding: 10px 20px;
     display: block;
-    transition: background-color 0.3s;
+    transition: background-color 0.5s;
 }
 
 .menu a:hover {
@@ -71,35 +76,10 @@ body h2{
     display: block;
 }
 
-.submenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f5f5f5;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 0;
-}
-
-.submenu li {
-    width: 100%;
-}
-
-.submenu a {
-    padding: 10px 20px;
-}
-
 .dropdown > a::after {
     margin-left: 5px;
 }
 
-/* Estilos para el menú principal */
-.menu > li {
-    position: relative;
-}
-
-/* Estilos para el submenú */
 .submenu {
     display: none;
     position: absolute;
@@ -112,17 +92,30 @@ body h2{
     z-index: 1;
 }
 
-.submenu li {
-    width: 100%;
-}
-
 .submenu a {
     padding: 10px 20px;
     display: block;
 }
 
+.dropdown > a::after {
+    margin-left: 5px;
+}
+
 .submenu a:hover {
     background-color: #FED9B7;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+/* Estilos para el menú principal */
+.menu > li {
+    position: sticky;
+}
+
+.submenu li {
+    width: 100%;
 }
 /**************************************************************************/
 
@@ -144,9 +137,25 @@ ul {
     list-style: square;
 }
 
-p.dotted {
-    border-style: dotted;
+section.informacion{
+    border-left: 6px solid #0081A7;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
+
+/* Alinea los símbolos verticalmente con el texto */
+.material-symbols-rounded,
+.material-symbols-outlined {
+    vertical-align: text-bottom; 
+}
+
+.material-symbols-outlined{
+    vertical-align: middle;
+    border-radius: 20px;
+    border: none;
+}
+
 /**************************************************************************/
 
 
@@ -176,6 +185,10 @@ input[type="number"] {
     width: 100px;
 }
 
+input:focus {
+    background-color: #00b0b91b;
+}
+
 /* Estilos para id del botón de la calculadora */
 #calcular {
     margin: 10px;
@@ -183,16 +196,22 @@ input[type="number"] {
     background: linear-gradient(45deg, #ff1b6b, #45caff);
     color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 18px;
+    box-shadow: 0 9px #999;
 }
 
 /* Estilos para el id del botón de la calculadora cuando el mouse está arriba */
 #calcular:hover {
-    background-color: #e29543; 
+    background-color: linear-gradient(45deg, #ff075e, #18bdff); 
 }
 
+#calcular:active {
+    background-color: linear-gradient(45deg, #740d31, #205e76);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 /**************************************************************************/
 
 
@@ -234,72 +253,43 @@ tr:hover {
 
 
 /* ESTILOS GENERALES PARA FOOTER */
-footer{
-    background-color: #FED9B7;
-    padding: 0;
-    
+/* Estilo general para el footer */
+footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Letras blancas */
+    padding: 20px 0; /* Espacio interno */
+    text-align: center;
 }
 
 /* Estilo para los titulos (h3) del footer */
 footer h3 {
     font-size: 25px;
     margin-bottom: 10px;
-    color: #F07167; 
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilo para los parrafos del footer */
+/* Estilo para los párrafos del footer */
 footer p {
-    margin: 5px 0;
-    text-align: center;
-    color: #F07167;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
 /* Estilo para las palabras importantes del footer */
 footer strong {
     font-weight: bold;
-    color: #F07167; 
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
 }
 
-/* Estilo para los enlaces del footer */
-footer a {
-    color: #0081A7; 
-    text-decoration: none;
+/* Estilo para los iconos de redes sociales */
+footer .material-symbols-rounded {
+    font-size: 30px;
+    margin: 0 5px;
+    cursor: pointer;
     transition: color 0.3s;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
 }
 
-/* Estilo para los enlaces del footer cuando el mouse está arriba */
-footer a:hover {
-    color: #00AFB9;
-    text-decoration: underline;
+/* Cambia el color de los iconos al pasar el mouse por encima */
+footer .material-symbols-rounded:hover {
+    color: #00AFB9; /* Cambia el color al azul deseado */
 }
 /**************************************************************************/
-
-
-/* Estilos para el modo claro
-body.modo-claro {
-    background-color: #ffffff;
-    color: #3c3b3b;
-}
-
-/* Estilos para el modo oscuro 
-body.modo-oscuro {
-    background-color: #000000;
-    color: #d7d4d4;
-}
-
-/* Estilo para el interruptor 
-.modo-oscuro {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-} 
-*/

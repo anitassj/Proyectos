@@ -23,197 +23,189 @@
 
     <!-- LINKS ICONOS GOOGLE -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
   </head>
 
 <!-- CUERPO -->
   <body>
+
+    <!-- MENÚ DESPLEGABLE -->
+    <ul class="menu">
+      <li><a href="#calculadora"><span class="material-symbols-outlined">home</span>Inicio</a></li>
+      <li class="dropdown">
+        <a href="#calculadora">Contenido<span class="material-symbols-outlined">
+          keyboard_arrow_down
+          </span></a>
+        <ul class="submenu">
+          <li><a href="#titulo1">¿Qué es el IMC?</a></li>
+          <li><a href="#titulo2">¿Cómo se calcula el IMC?</a></li>
+          <li><a href="#titulo3">Clasificación del IMC</a></li>
+        </ul>
+        <li><a href="#">Acerca de</a></li>
+      </li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><button><span class="material-symbols-outlined">light_mode</span></button></li>
+    </ul>
+  
     <header>
-
-      <!-- MENÚ DESPLEGABLE -->
-        <nav>
-          <ul class="menu">
-            <li><a href="#">Calculadora</a></li>
-            <li class="dropdown">
-              <a href="#"> <span class="material-symbols-rounded">menu</span>Contenido</a>
-              <ul class="submenu">
-                <li><a href="#titulo1">¿Qué es el IMC?</a></li>
-                <li><a href="#titulo2">¿Cómo se calcula el IMC?</a></li>
-                <li><a href="#titulo3">Clasificación del IMC</a></li>
-              </ul>
-              <li><a href="#">Acerca de</a></li> <!--  -->
-            </li>
-            <li><a href="#">Contacto</a></li>
-
-            <!-- REVISAR
-            <li class="modo-oscuro">
-              <button for="modo-oscuro"><span class="material-symbols-rounded">light_mode</span></button>
-            </li>
-            -->
-          </ul>
-        </nav>
-       
       <h1 title="Pruebe la calculadora ❤️​">Calculadora de Índice de Masa Corporal (IMC)</h1>
       <p>
         Para un calculo correcto, tenés que introducir los siguientes datos: 
       </p>
-    </header>
+      </header>
+  
+      <!-- CALCULADORA -->
+      <section class="calculadora" id="calculadora">
+        <form autocomplete="on">
+          <fieldset>
+            <legend><span class="material-symbols-rounded">medical_information</span></legend>
+            <section>
+                <label for="peso">Peso en kilogramos</label>
+                <input type="number" id="peso" placeholder="60" autofocus required style="text-align: center" required>
+                <span>kg</span>
+            </section>
+            <section>
+                <label for="altura">Altura en metros</label>
+                <input type="number" id="altura" placeholder="1.70" required style="text-align: center" required>
+                <span>m</span>
+            </section>
+            <button id="calcular">Calcular IMC</button>
+          </fieldset>
+        </form>
+        <div id="resultado"></div>
+      </section>  
+    
+    <div class="contenido">
+    
+      <!-- INFORMACIÓN -->
+      <section class="informacion">
+        <h2>Contenido</h2>
+        <ol>
+          <li><a href="#titulo1">¿Qué es el IMC?</a></li>
+          <li><a href="#titulo2">¿Cómo se calcula el IMC?</a></li>
+          <li><a href="#titulo3">Clasificación del IMC</a></li>
+        </ol>
+      </section>
 
-    <!-- CALCULADORA -->
-    <section class="calculadora">
-      <form autocomplete="on">
-        <fieldset>
-          <legend><span class="material-symbols-rounded">medical_information</span></legend>
-          <section>
-              <label for="peso">Peso en kilogramos</label>
-              <input type="number" id="peso" placeholder="60" autofocus required style="text-align: center" required>
-              <span>kg</span>
-          </section>
-          <section>
-              <label for="altura">Altura en metros</label>
-              <input type="number" id="altura" placeholder="1.70" required style="text-align: center" required>
-              <span>m</span>
-          </section>
-          <button id="calcular">Calcular IMC</button>
-        </fieldset>
-      </form>
-      <div id="resultado"></div>
-    </section>  
-
-    <!-- INFORMACIÓN -->
-    <section class="borde">
-      <h2>Guía de lectura</h2>
-      <ol>
-        <i class="fi fi-rr-square-right"></i>
-        <i class="fi fi-br-arrow-right"></i>
-        <i class="fi fi-sr-book"></i>
-        <i class="fi fi-rr-broom"></i>
-
-        <li><a href="#titulo1">¿Qué es el IMC?</a></li>
-        <li><a href="#titulo2">¿Cómo se calcula el IMC?</a></li>
-        <li><a href="#titulo3">Clasificación del IMC</a></li>
-      </ol>
-    </section>
-
-    <section>
-      <h2 id="titulo1">¿Qué es el IMC?</h2>
-      <p>
-        El Índice de Masa Corporal (IMC) es una herramienta ampliamente utilizada en el campo de la salud
-        y la nutrición que proporciona una medida relativa del peso corporal de una persona en relación 
-        con su altura. Este indicador se ha convertido en una parte fundamental de la evaluación del estado
-        nutricional y ha sido una herramienta valiosa para profesionales de la salud, investigadores y 
-        personas interesadas en mantener un estilo de vida saludable.
-      </p>
-      <p>
-        La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional
-        dependiendo del IMC de una persona. Para más información hace  
-        <a href="https://cdn.who.int/media/docs/default-source/obesity/who-discussion-paper-on-obesity---final190821-es.pdf?sfvrsn=4cd6710a_24#:~:text=El%20%C3%ADndice%20de%20masa%20corporal,en%20lactantes%2C%20ni%C3%B1os%20y%20adolescentes."
-        target="_blank">click aquí.</a>
-        <img src="./docs/assets/images/imagen-principal.jpeg" alt="Tabla de IMC"/>
-      </p>
-      <p>
-        Es importante destacar que el IMC se utiliza principalmente en adultos y no se aplica de la misma
-        manera a niños y adolescentes debido a las variaciones normales en el crecimiento y el 
-        desarrollo durante la infancia y la adolescencia. Además, en personas mayores, el IMC puede no 
-        ser el indicador más preciso de su salud debido a cambios en la composición corporal relacionados 
-        con la edad.
-      </p>
-      <p>
-        A pesar de su amplia utilidad, es esencial comprender que el IMC tiene limitaciones. No tiene en 
-        cuenta otros factores importantes para la salud, como la distribución de la grasa corporal, la 
-        masa muscular, la edad, el género y la genética. Por ejemplo, dos personas con el mismo IMC pueden 
-        tener una composición corporal muy diferente: una puede tener un alto porcentaje de grasa corporal,
-        mientras que la otra puede tener una masa muscular significativa.
-      </p>
-        Por lo tanto, aunque el IMC es una herramienta valiosa para obtener una estimación aproximada del
-        estado nutricional, no debe considerarse como el único criterio para evaluar la salud de una 
-        persona. Se recomienda que las evaluaciones nutricionales se realicen de manera integral, 
-        teniendo en cuenta factores adicionales, como la alimentación, la actividad física, los 
-        antecedentes médicos y la evaluación clínica por parte de un profesional de la salud.
-      <p>
-        En síntesis, el Índice de Masa Corporal (IMC) es una medida importante que proporciona una idea 
-        general del estado nutricional de una persona en función de su peso y altura. Aunque es una 
-        herramienta valiosa, se debe utilizar con precaución y en conjunto con otras evaluaciones para 
-        obtener una comprensión completa de la salud y el bienestar de una persona. La OMS ha establecido 
-        categorías específicas para interpretar el IMC, lo que facilita su uso en la práctica clínica y 
-        la investigación en salud pública.
-      </p>
-    </section>
-
-    <section>
-        <h2 id="titulo2">¿Cómo se calcula el IMC?</h2>
+      <section>
+        <h2 id="titulo1">¿Qué es el IMC?</h2>
         <p>
-          El índice de masa corporal se calcula mediante una división entre el peso en kilogramos y 
-          la altura en metros elevada al cuadrado. Matemáticamente, se expresa de la siguiente manera:
-        <p style="text-align: center;">
-        IMC = peso (kg) &#10135; altura (metros) <sup>2</sup>
+          El Índice de Masa Corporal (IMC) es una herramienta ampliamente utilizada en el campo de la salud
+          y la nutrición que proporciona una medida relativa del peso corporal de una persona en relación 
+          con su altura. Este indicador se ha convertido en una parte fundamental de la evaluación del estado
+          nutricional y ha sido una herramienta valiosa para profesionales de la salud, investigadores y 
+          personas interesadas en mantener un estilo de vida saludable.
         </p>
         <p>
-        Por ejemplo, supongamos que una persona
-        pesa 60 kilos y mide una altura de 1.70 metro, la cuenta que se realiza es: 
-        </p>
-        <p style="text-align: center;">
-        IMC = 60 &#10135; (1.70)<sup>2</sup> = 20.76
+          La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional
+          dependiendo del IMC de una persona. Para más información hace  
+          <a href="https://cdn.who.int/media/docs/default-source/obesity/who-discussion-paper-on-obesity---final190821-es.pdf?sfvrsn=4cd6710a_24#:~:text=El%20%C3%ADndice%20de%20masa%20corporal,en%20lactantes%2C%20ni%C3%B1os%20y%20adolescentes."
+          target="_blank">click aquí.</a>
+          <img src="./docs/assets/images/imagen-principal.jpeg" alt="Tabla de IMC"/>
         </p>
         <p>
-        Por lo tanto, según la <abbr title="Organización Mundial de la Salud">OMS</abbr>, su peso se encuentra saludable ya que está entre el rango 
-        18.5 y 24.9 del índice. 
+          Es importante destacar que el IMC se utiliza principalmente en adultos y no se aplica de la misma
+          manera a niños y adolescentes debido a las variaciones normales en el crecimiento y el 
+          desarrollo durante la infancia y la adolescencia. Además, en personas mayores, el IMC puede no 
+          ser el indicador más preciso de su salud debido a cambios en la composición corporal relacionados 
+          con la edad.
         </p>
-    </section>
+        <p>
+          A pesar de su amplia utilidad, es esencial comprender que el IMC tiene limitaciones. No tiene en 
+          cuenta otros factores importantes para la salud, como la distribución de la grasa corporal, la 
+          masa muscular, la edad, el género y la genética. Por ejemplo, dos personas con el mismo IMC pueden 
+          tener una composición corporal muy diferente: una puede tener un alto porcentaje de grasa corporal,
+          mientras que la otra puede tener una masa muscular significativa.
+        </p>
+          Por lo tanto, aunque el IMC es una herramienta valiosa para obtener una estimación aproximada del
+          estado nutricional, no debe considerarse como el único criterio para evaluar la salud de una 
+          persona. Se recomienda que las evaluaciones nutricionales se realicen de manera integral, 
+          teniendo en cuenta factores adicionales, como la alimentación, la actividad física, los 
+          antecedentes médicos y la evaluación clínica por parte de un profesional de la salud.
+        <p>
+          En síntesis, el Índice de Masa Corporal (IMC) es una medida importante que proporciona una idea 
+          general del estado nutricional de una persona en función de su peso y altura. Aunque es una 
+          herramienta valiosa, se debe utilizar con precaución y en conjunto con otras evaluaciones para 
+          obtener una comprensión completa de la salud y el bienestar de una persona. La OMS ha establecido 
+          categorías específicas para interpretar el IMC, lo que facilita su uso en la práctica clínica y 
+          la investigación en salud pública.
+        </p>
+      </section>
 
-    <!-- TABLA -->
-    <section>
-      <h2 id="titulo3">Clasificación del IMC</h2>
-      <p>
-        El IMC, al proporcionar una relación entre el peso y la altura, ofrece una medida estandarizada 
-        que permite clasificar a las personas en diferentes categorías de acuerdo con su composición 
-        corporal. Estas categorías, establecidas por la Organización Mundial de la Salud (OMS), incluyen:  
-      </p>
-      <table>
-        <caption>Tabla 1.1 - Clasificación</caption>
-        <tr>
-          <th>Estado de salud</th>
-          <th>Rango</th>
-        </tr>
-        <tr>
-          <td>Por debajo</td>
-          <td>Menor a 18.5</td>
-        </tr>
-        <tr>
-          <td>Saludable</td>
-          <td>Entre 18.5 y 24.9</td>
-        </tr>
-        <tr>
-          <td>Sobrepeso</td>
-          <td>Entre 25 y 29.9</td>
-        </tr>
-        <tr>
-          <td>Obesidad I</td>
-          <td>Entre 25 y 29.9</td>
-        </tr>
-        <tr>
-          <td>Obesidad II</td>
-          <td>Mayor a 40</td>
-        </tr>
-      </table>
-      <p>
-         
-      </p>
-    </section>
+      <section>
+          <h2 id="titulo2">¿Cómo se calcula el IMC?</h2>
+          <p>
+            El índice de masa corporal se calcula mediante una división entre el peso en kilogramos y 
+            la altura en metros elevada al cuadrado. Matemáticamente, se expresa de la siguiente manera:
+          <p style="text-align: center;">
+          IMC = peso (kg) &#10135; altura (metros) <sup>2</sup>
+          </p>
+          <p>
+          Por ejemplo, supongamos que una persona
+          pesa 60 kilos y mide una altura de 1.70 metro, la cuenta que se realiza es: 
+          </p>
+          <p style="text-align: center;">
+          IMC = 60 &#10135; (1.70)<sup>2</sup> = 20.76
+          </p>
+          <p>
+          Por lo tanto, según la <abbr title="Organización Mundial de la Salud">OMS</abbr>, su peso se encuentra saludable ya que está entre el rango 
+          18.5 y 24.9 del índice. 
+          </p>
+      </section>
+
+      <!-- TABLA -->
+      <section>
+        <h2 id="titulo3">Clasificación del IMC</h2>
+        <p>
+          El IMC, al proporcionar una relación entre el peso y la altura, ofrece una medida estandarizada 
+          que permite clasificar a las personas en diferentes categorías de acuerdo con su composición 
+          corporal. Estas categorías, establecidas por la Organización Mundial de la Salud (OMS), incluyen:  
+        </p>
+        <table>
+          <caption>Tabla 1.1 - Clasificación</caption>
+          <tr>
+            <th>Estado de salud</th>
+            <th>Rango</th>
+          </tr>
+          <tr>
+            <td>Por debajo</td>
+            <td>Menor a 18.5</td>
+          </tr>
+          <tr>
+            <td>Saludable</td>
+            <td>Entre 18.5 y 24.9</td>
+          </tr>
+          <tr>
+            <td>Sobrepeso</td>
+            <td>Entre 25 y 29.9</td>
+          </tr>
+          <tr>
+            <td>Obesidad I</td>
+            <td>Entre 25 y 29.9</td>
+          </tr>
+          <tr>
+            <td>Obesidad II</td>
+            <td>Mayor a 40</td>
+          </tr>
+        </table>
+      </section>
+
+    </div>
   
     <!-- CONTACTO -->
-    <footer class="contacto">
-      <div class="container">
-        <h3>Contacto</h3>
-        <p>
-            <strong><span class="material-symbols-rounded">call</span> Celular </strong> 
-            <a href="tel:+5492346304449">+5492346304449</a> |
-            <strong><span class="material-symbols-rounded">work</span> LinkedIn </strong> 
-            <a href="https://www.linkedin.com/in/ana-luz-ulariaga">Ana Luz Ulariaga</a> |
-            <strong><span class="material-symbols-rounded">alternate_email</span> Email </strong> 
-            <a href="mailto:analuzulariaga@gmail.com">analuzulariaga@gmail.com</a>
-        </p>
-      </div>
-  </footer>
+    <footer class="contacto" id="contacto">
+        <div class="container">
+            <h3>Contacto</h3>
+            <p>
+                <strong><span class="material-symbols-rounded">call</span> Celular </strong>
+                <a href="tel:+5492346304449">+5492346304449</a> |
+                <strong><span class="material-symbols-rounded">work</span> LinkedIn </strong>
+                <a href="https://www.linkedin.com/in/ana-luz-ulariaga">Ana Luz Ulariaga</a> |
+                <strong><span class="material-symbols-rounded">alternate_email</span> Email </strong>
+                <a href="mailto:analuzulariaga@gmail.com">analuzulariaga@gmail.com</a>
+            </p>
+        </div>
+    </footer>
   </body>
 </html>
